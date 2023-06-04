@@ -1,18 +1,20 @@
 import style from './TodoList.module.css'
+import { ITodo } from '../../App'
 import { Todo } from './Todo'
 
 type TodosProps = {
-  todos: string[]
-  deleteTodo: (index: number) => void
+  todos: ITodo[]
+  toggleTodo: (id: string) => void
+  deleteTodo: (id: string) => void
 }
 
-export const TodoLIst = ({ todos, deleteTodo }: TodosProps) => {
+export const TodoLIst = ({ todos, toggleTodo, deleteTodo }: TodosProps) => {
   return (
     <div className={style.todoListContainer}>
       {!todos.length && <h2>Todo list is empty</h2>}
 
-      {todos.map((todo, index) => (
-        <Todo key={index} todo={todo} index={index} deleteTodo={deleteTodo} />
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
       ))}
     </div>
   )
