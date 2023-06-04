@@ -1,0 +1,27 @@
+.todo {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem 2.5rem;
+
+  border-radius: 0.5rem;
+  border: 0.4rem solid #555;
+  background-color: #fbfef9;
+
+  font-size: 2.5rem;
+  color: #112d49;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.todoText {
+  width: 100%;
+  text-align: left;
+}
+
+.todoIcon {
+  margin-right: 1.3rem;
+
+  color: #112d49;
+}
