@@ -12,7 +12,7 @@ type TodoProps = {
 
 export const Todo = ({ todo, toggleTodo, deleteTodo }: TodoProps) => {
   return (
-    <div className={style.todo}>
+    <div className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}>
       <FaFile className={style.todoIcon} />
       <div className={style.todoText}>{todo.text}</div>
       <RiDeleteBin2Line className={style.deleteIcon} onClick={() => deleteTodo(todo.id)} />

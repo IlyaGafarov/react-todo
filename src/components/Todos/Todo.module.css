@@ -40,10 +40,11 @@
 
 .checkIcon,
 .deleteIcon {
-  cursor: pointer;
-  color: lightgrey;
   padding: 0 7px;
-  font-size: 1.8rem;
+
+  color: lightgrey;
+
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
