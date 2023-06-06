@@ -1,5 +1,5 @@
 .todoFormContainer {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .todoFormContainer form {
@@ -9,12 +9,17 @@
 }
 
 .todoFormContainer input {
-  width: 45%;
+  width: 50%;
   height: 3rem;
   padding: 1rem 1.5rem;
 
   border: none;
+  outline: none;
   border-radius: 0.5rem;
 
   font-size: 2.3rem;
+}
+
+.todoFormContainer input:focus {
+  box-shadow: 0 0 1rem 0 #0ae;
 }

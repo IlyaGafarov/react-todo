@@ -1,5 +1,6 @@
-import { FaFile, FaCheck } from 'react-icons/fa'
-import { RiDeleteBin2Line } from 'react-icons/ri'
+import { AiOutlineDelete, AiOutlineBook } from 'react-icons/ai'
+import { BsFileEarmarkCheck } from 'react-icons/bs'
+
 import style from './Todo.module.css'
 
 import { ITodo } from '../../App'
@@ -12,11 +13,11 @@ type TodoProps = {
 
 export const Todo = ({ todo, toggleTodo, deleteTodo }: TodoProps) => {
   return (
-    <div className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}>
-      <FaFile className={style.todoIcon} />
+    <li className={`${style.todo} ${todo.isCompleted ? style.completedTodo : ''}`}>
+      <AiOutlineBook className={style.todoIcon} />
       <div className={style.todoText}>{todo.text}</div>
-      <RiDeleteBin2Line className={style.deleteIcon} onClick={() => deleteTodo(todo.id)} />
-      <FaCheck className={style.checkIcon} onClick={() => toggleTodo(todo.id)} />
-    </div>
+      <AiOutlineDelete className={style.deleteIcon} onClick={() => deleteTodo(todo.id)} />
+      <BsFileEarmarkCheck className={style.checkIcon} onClick={() => toggleTodo(todo.id)} />
+    </li>
   )
 }

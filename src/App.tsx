@@ -16,6 +16,14 @@ export type ITodo = {
 export const App = () => {
   const [todos, setTodos] = React.useState<ITodo[]>([])
 
+  React.useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todos') || '')
+
+    if (todos) {
+      setTodos(todos)
+    }
+  }, [])
+
   const addTodoHandler = (text: string) => {
     const newTodo: ITodo = {
       text,
@@ -46,6 +54,10 @@ export const App = () => {
   }
 
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length
+
+  React.useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   return (
     <div className="App">

@@ -10,12 +10,12 @@ type TodosProps = {
 
 export const TodoLIst = ({ todos, toggleTodo, deleteTodo }: TodosProps) => {
   return (
-    <div className={style.todoListContainer}>
+    <ul className={style.todoListContainer}>
       {!todos.length && <h2>Todo list is empty</h2>}
 
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
       ))}
-    </div>
+    </ul>
   )
 }

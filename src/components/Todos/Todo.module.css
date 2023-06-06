@@ -21,8 +21,7 @@
 }
 
 .todoIcon {
-  margin-right: 1.3rem;
-
+  margin-right: 1.5rem;
   color: #112d49;
 }
 
@@ -45,19 +44,19 @@
   color: lightgrey;
 
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.1s ease-in-out;
 }
 
 .checkIcon:hover,
 .deleteIcon:hover {
   cursor: pointer;
-  transform: scale(1.3);
-}
-
-.checkIcon:hover {
-  color: green;
+  transform: scale(1.2);
 }
 
 .deleteIcon:hover {
   color: red;
+}
+
+.checkIcon:hover {
+  color: darkolivegreen;
 }

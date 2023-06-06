@@ -1,4 +1,5 @@
-import { RiRefreshLine, RiDeleteBin2Line } from 'react-icons/ri'
+import { AiFillInteraction, AiFillDelete } from 'react-icons/ai'
+
 import { Button } from '../UI/Button'
 
 type TodosActionsProps = {
@@ -15,13 +16,13 @@ export const TodosActions = ({
   return (
     <>
       <Button title="Reset Todos" onClick={resetTodos}>
-        <RiRefreshLine />
+        <AiFillInteraction />
       </Button>
       <Button
         title="Clear Completed Todos"
         onClick={deleteCompletedTodos}
         disabled={!completedTodosExist}>
-        <RiDeleteBin2Line />
+        <AiFillDelete />
       </Button>
     </>
   )
